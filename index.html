@@ -1,275 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f8f5ef">
-<title>Baburam Misthan Bhandar | Moradabad</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#201b17">
+<meta name="description" content="Thoughtful floral design and unforgettable celebrations. Explore wedding flowers, event styling and bespoke floral installations.">
+<title>Bloom & Grace — Floral Design & Events</title>
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f8f5ef;--paper:#fffdf8;--ink:#30251d;--muted:#81766a;--brown:#75472e;--line:#e8dfd2;--gold:#bc925a}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-img{display:block;width:100%}
-.container{width:min(1160px,90%);margin:auto}
-nav{height:82px;display:flex;justify-content:space-between;align-items:center;padding:0 5%;border-bottom:1px solid var(--line);position:relative;z-index:10;background:var(--bg)}
-.logo{font-family:'Playfair Display',serif;font-size:23px;font-weight:600}
-.logo span{display:block;font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;margin-top:6px;color:var(--muted)}
-.navlinks{display:flex;align-items:center;gap:30px}
-.navlinks a{font-size:12px;color:#66594e}
-.navlinks a:hover{color:var(--brown)}
-.nav-btn{padding:13px 23px;background:var(--ink);color:white!important}
-.menu-toggle{display:none;background:none;border:0;font-size:25px;cursor:pointer;color:var(--ink)}
-.eyebrow{display:flex;align-items:center;gap:12px;font-size:10px;text-transform:uppercase;letter-spacing:3px;color:var(--brown);font-weight:700}
-.eyebrow:before{content:'';width:35px;height:1px;background:var(--gold)}
-.primary-btn{display:inline-block;padding:17px 28px;background:var(--brown);color:white;font-size:12px;letter-spacing:1px;transition:.3s}
-.primary-btn:hover{background:var(--ink);transform:translateY(-3px)}
-.text-btn{font-size:12px;border-bottom:1px solid var(--brown);padding-bottom:5px}
-.hero{min-height:650px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:65px;padding:65px 0 80px}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(55px,7vw,91px);font-weight:400;line-height:1.03;letter-spacing:-3px;margin:28px 0}
-.hero h1 em{color:var(--brown)}
-.hero p{color:var(--muted);line-height:1.9;max-width:420px;font-size:14px}
-.hero-actions{display:flex;align-items:center;gap:25px;margin-top:35px}
-.hero-image,.product-image,.feature-image,.gallery-item{width:100%;aspect-ratio:1/1;height:auto;overflow:hidden;background:#e9dfd1;position:relative}
-.hero-image img,.product-image img,.feature-image img,.gallery-item img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;object-position:center;transition:transform .6s ease}
-.hero-image:hover img,.product:hover img,.gallery-item:hover img{transform:scale(1.04)}
-.hero-image{max-width:540px}
-.image-note{position:absolute;bottom:20px;left:15px;background:var(--paper);padding:17px 20px;z-index:2}
-.image-note strong{font-family:'Playfair Display',serif;font-size:19px;display:block}
-.image-note small{color:var(--muted);font-size:9px;letter-spacing:1px}
-.marquee{background:var(--brown);color:white;padding:20px 0;overflow:hidden;white-space:nowrap;font-family:'Playfair Display',serif;font-size:19px;letter-spacing:2px}
-.marquee span{margin:0 35px}
-.intro{padding:110px 0;text-align:center;max-width:790px;margin:auto}
-.intro .eyebrow{justify-content:center}
-.intro h2{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(35px,5vw,58px);line-height:1.2;margin:27px 0}
-.intro h2 em{color:var(--brown)}
-.intro p{color:var(--muted);font-size:14px;line-height:2;max-width:620px;margin:auto}
-.collection{padding:40px 0 115px}
-.section-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:40px}
-.section-heading h2{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(38px,5vw,55px);margin-top:12px}
-.section-heading p{color:var(--muted);font-size:12px;max-width:280px;line-height:1.8}
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.product-info{padding:20px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px}
-.product-info h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:500}
-.product-info span{font-size:10px;color:var(--muted)}
-.feature{background:#eee6da;padding:95px 0}
-.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
-.feature-copy h2{font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,62px);font-weight:400;line-height:1.15;margin:24px 0}
-.feature-copy p{color:var(--muted);font-size:14px;line-height:2;margin-bottom:28px}
-.gallery{padding:110px 0}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:40px}
-.gallery-item{cursor:pointer}
-.contact{background:var(--paper);padding:100px 0}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
-.contact h2{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(40px,5vw,60px);margin:20px 0}
-.contact p{color:var(--muted);font-size:14px;line-height:2}
-.contact-details{display:grid;gap:20px;margin-top:30px}
-.detail{border-bottom:1px solid var(--line);padding-bottom:18px}
-.detail small{display:block;color:var(--gold);font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
-.detail strong{font-size:14px;font-weight:500}
-.contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.visit{padding:90px 0;text-align:center;background:var(--brown);color:white}
-.visit h2{font-family:'Playfair Display',serif;font-size:clamp(38px,5vw,58px);font-weight:400;margin:15px 0 25px}
-.visit p{color:#eadfd4;font-size:13px;line-height:1.9;margin-bottom:28px}
-.visit .primary-btn{background:var(--paper);color:var(--ink)}
-footer{padding:35px 5%;display:flex;justify-content:space-between;gap:20px;align-items:center;color:var(--muted);font-size:11px}
-footer strong{font-family:'Playfair Display',serif;font-size:18px;color:var(--ink)}
-.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:800px){
- nav{height:72px}.menu-toggle{display:block}
- .navlinks{display:none;position:absolute;top:72px;left:0;width:100%;padding:25px 5%;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:22px}
- .navlinks.open{display:flex}
- .hero{grid-template-columns:1fr;gap:35px;padding:55px 0}
- .hero h1{font-size:64px}
- .hero-image{max-width:100%;max-height:520px}
- .section-heading{display:block}.section-heading p{margin-top:15px}
- .products{grid-template-columns:repeat(2,1fr);gap:18px}
- .feature-grid,.contact-grid{grid-template-columns:1fr;gap:35px}
- .feature{padding:70px 0}
- .gallery{padding:75px 0}
- .gallery-grid{grid-template-columns:repeat(2,1fr);gap:10px}
- .intro{padding:75px 0}
-}
-@media(max-width:480px){
- .container{width:90%}
- .hero h1{font-size:55px}
- .hero-actions{gap:17px;flex-wrap:wrap}
- .products{grid-template-columns:1fr 1fr;gap:13px}
- .product-info{display:block}
- .product-info span{display:block;margin-top:7px}
- .product-info h3{font-size:18px}
- .gallery-grid{grid-template-columns:repeat(2,1fr)}
- .contact{padding:70px 0}
- footer{flex-direction:column;text-align:center}
-}
+:root{--ink:#211c19;--cream:#f5f0e9;--rose:#e8b8b2;--sage:#34372b;--muted:#756b62;--line:rgba(255,255,255,.25)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}body.menu-open{overflow:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.wrap{width:min(1240px,92%);margin:auto}.topbar{position:absolute;z-index:10;top:0;left:0;width:100%;color:#fff;padding:24px 0;transition:background .3s,padding .3s}.topbar.scrolled{position:fixed;background:rgba(28,23,20,.94);backdrop-filter:blur(12px);padding:13px 0}.nav{display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{font-family:"Playfair Display",serif;font-size:24px;line-height:1.05;letter-spacing:.06em}.brand small{display:block;font:10px "DM Sans",sans-serif;letter-spacing:.2em;margin-top:8px}.brand-mark{display:block;text-align:center;font-size:25px;margin-bottom:4px}.navlinks{display:flex;align-items:center;gap:clamp(16px,3vw,38px);font-size:12px;letter-spacing:.08em;text-transform:uppercase}.navlinks a{opacity:.86;position:relative}.navlinks a:after{content:"";height:1px;position:absolute;bottom:-8px;left:0;width:0;background:var(--rose);transition:width .3s}.navlinks a:hover:after{width:100%}.outline-btn,.btn{display:inline-flex;align-items:center;justify-content:center;gap:22px;padding:15px 22px;text-transform:uppercase;letter-spacing:.1em;font-size:12px;border:1px solid rgba(255,255,255,.7);color:white;background:transparent;cursor:pointer;transition:transform .25s,background .25s,color .25s}.outline-btn:hover{background:#fff;color:var(--ink)}.btn{background:var(--rose);border-color:var(--rose);color:var(--ink);min-width:220px}.btn:hover{transform:translateY(-3px);background:#f2cbc5}.hamb{display:none;background:none;border:0;color:#fff;font-size:27px}.hero{min-height:670px;height:min(760px,88vh);position:relative;display:flex;align-items:center;color:white;background:#211c19;overflow:hidden}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,13,12,.93) 0%,rgba(18,14,12,.77) 32%,rgba(18,14,12,.14) 74%),linear-gradient(0deg,rgba(0,0,0,.15),transparent 50%),url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2200&q=85');background-size:cover;background-position:center}.hero:before{background-image:linear-gradient(90deg,rgba(15,13,12,.92) 0%,rgba(18,14,12,.73) 34%,rgba(18,14,12,.12) 76%),url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2200&q=85')}.hero-content{position:relative;z-index:1;padding-top:80px;max-width:590px}.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#e7c6bd;font-weight:600}.hero h1{font-family:"Playfair Display",serif;font-weight:400;text-transform:uppercase;font-size:clamp(48px,6.3vw,82px);line-height:.99;letter-spacing:-.025em;margin:18px 0 25px}.hero h1 em{font-style:normal;color:var(--rose)}.flourish{color:#d8b6ad;margin:12px 0;font-size:24px}.hero p{color:#e6ddd5;line-height:1.9;font-size:14px;max-width:330px;margin:18px 0 25px}.hero .btn{margin-top:4px}.section{padding:80px 0}.center{text-align:center}.section-label{font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:#9c8177;font-weight:700}.section h2,.banner h2,.contact h2{font:400 clamp(30px,4vw,45px)/1.15 "Playfair Display",serif;text-transform:uppercase;margin:14px 0 12px}.subline{color:var(--muted);font-size:13px;line-height:1.8;max-width:570px;margin:0 auto 34px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:left}.work-card{min-width:0}.work-img{height:330px;overflow:hidden;background:#ddd;position:relative}.work-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}.work-card:hover img{transform:scale(1.07)}.work-card h3{font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin:16px 0 8px}.work-card p{font-size:12px;color:#645c54;line-height:1.7;margin:0;max-width:220px}.tiny-icon{color:#9d9a86;font-size:23px;margin-right:8px}.beforeafter{position:relative}.tag{position:absolute;bottom:12px;left:12px;background:var(--rose);padding:5px 9px;font-size:10px;text-transform:uppercase;letter-spacing:.1em}.banner{position:relative;min-height:370px;display:flex;align-items:center;color:white;overflow:hidden;background:#34372b}.banner:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(37,40,30,.95),rgba(37,40,30,.68) 40%,rgba(37,40,30,.08)),url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=2000&q=85');background-size:cover;background-position:center}.banner:before{background-image:linear-gradient(90deg,rgba(37,40,30,.95),rgba(37,40,30,.65) 42%,rgba(37,40,30,.06)),url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=2000&q=85')}.banner-content{position:relative;max-width:470px;padding:60px 0}.banner h2{font-size:clamp(36px,4.3vw,54px)}.banner h2 em{color:var(--rose);font-style:normal}.banner p{font-size:13px;color:#e4dfd5;line-height:1.9;margin:20px 0}.values{background:#292b22;color:#f5f0e9;padding:24px 0}.value-grid{display:grid;grid-template-columns:repeat(4,1fr)}.value{display:flex;gap:14px;align-items:center;padding:8px 22px;border-right:1px solid #68685d}.value:last-child{border:0}.value .ico{font-size:27px;color:#d9b8af}.value strong{font-size:11px;text-transform:uppercase;letter-spacing:.07em;display:block}.value small{font-size:11px;color:#c4bfb4;display:block;margin-top:5px}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.gallery button{padding:0;border:0;background:#ddd;overflow:hidden;height:290px;cursor:zoom-in}.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.gallery button:hover img{transform:scale(1.06)}.about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px}.about-photo{height:480px;overflow:hidden}.about-photo img{width:100%;height:100%;object-fit:cover}.about-copy p{color:var(--muted);font-size:14px;line-height:1.9}.contact{background:#eae1d7;padding:80px 0}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}.contact-info p{color:#6b6158;line-height:1.8;font-size:13px}.contact-info a{text-decoration:underline;text-underline-offset:4px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}.field label{font-size:11px;text-transform:uppercase;letter-spacing:.1em}.field input,.field select,.field textarea{border:1px solid #c9bcb0;background:rgba(255,255,255,.55);padding:13px;color:var(--ink);outline:none;border-radius:0}.field input:focus,.field select:focus,.field textarea:focus{border-color:#8c6b60}.field textarea{min-height:110px;resize:vertical}.form-note{font-size:11px;color:#6b6158;line-height:1.7}.footer{background:#201c19;color:#d9d0c8;padding:32px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:11px}.footer .brand{font-size:20px}.socials{display:flex;gap:18px}.socials a:hover{color:var(--rose)}.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:translateY(0)}.delay-1{transition-delay:.12s}.delay-2{transition-delay:.22s}.delay-3{transition-delay:.32s}.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:30;display:none;align-items:center;justify-content:center;padding:25px}.lightbox.open{display:flex}.lightbox img{max-width:min(100%,1000px);max-height:85vh;object-fit:contain}.lightbox button{position:absolute;right:22px;top:18px;color:#fff;background:transparent;border:0;font-size:35px;cursor:pointer}.toast{display:none;padding:12px 15px;background:#34372b;color:white;font-size:13px;margin-top:15px}.toast.show{display:block}
+@media(max-width:900px){.navlinks{gap:14px;font-size:10px}.outline-btn{padding:12px;font-size:10px}.cards{grid-template-columns:repeat(2,1fr);gap:28px 14px}.work-img{height:350px}.value{padding:8px 12px}.value strong{font-size:10px}.value small{font-size:10px}.gallery button{height:240px}}
+@media(max-width:650px){.topbar{padding:16px 0}.brand{font-size:20px}.brand small{font-size:8px}.brand-mark{font-size:20px}.hamb{display:block;z-index:12}.navlinks{display:none;position:fixed;inset:0;background:#211c19;flex-direction:column;justify-content:center;gap:28px;font-size:14px}.navlinks.open{display:flex}.navlinks a{font-size:14px}.navlinks .outline-btn{font-size:12px;padding:15px 24px}.hero{height:780px;min-height:690px;max-height:92vh}.hero:before{background-image:linear-gradient(90deg,rgba(15,13,12,.88),rgba(18,14,12,.45)),url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=85');background-position:58% center}.hero-content{padding-top:65px}.hero h1{font-size:clamp(47px,12vw,67px)}.section{padding:60px 0}.cards{gap:24px 12px}.work-img{height:240px}.work-card h3{font-size:10px;line-height:1.5}.work-card p{font-size:11px}.banner{min-height:410px}.banner:before{background-image:linear-gradient(90deg,rgba(37,40,30,.93),rgba(37,40,30,.52)),url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1100&q=85');background-position:center}.value-grid{grid-template-columns:1fr 1fr;gap:10px}.value{border:0;padding:12px 5px}.value:nth-child(odd){border-right:1px solid #68685d}.gallery{grid-template-columns:1fr 1fr;gap:10px}.gallery button{height:210px}.about-grid,.contact-grid{grid-template-columns:1fr;gap:28px}.about-photo{height:330px}.contact{padding:60px 0}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-inner{flex-direction:column;text-align:center}.socials{justify-content:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*,*:before,*:after{animation:none!important;transition:none!important}}
 </style>
 </head>
-
 <body>
-<nav>
-  <a class="logo" href="#home">Baburam Misthan Bhandar<span>Tradition · Taste · Quality</span></a>
-  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
-  <div class="navlinks" id="navLinks">
-    <a href="#home">Home</a>
-    <a href="#story">Our Story</a>
-    <a href="#sweets">Our Sweets</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-    <a class="nav-btn" href="#visit">Visit Us</a>
-  </div>
-</nav>
-
+<header class="topbar" id="topbar">
+ <div class="wrap nav">
+  <a class="brand" href="#home" aria-label="Bloom and Grace home"><span class="brand-mark">❦</span>BLOOM &amp; GRACE<small>FLORAL DESIGN &amp; EVENTS</small></a>
+  <button class="hamb" id="hamb" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+   <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#journal">Journal</a><a href="#contact">Contact</a><a class="outline-btn" href="#contact">Inquire now</a>
+  </nav>
+ </div>
+</header>
 <main>
-<section class="container hero" id="home">
-  <div class="hero-copy reveal">
-    <div class="eyebrow">A taste of tradition</div>
-    <h1>Sweetness<br>made with<br><em>love.</em></h1>
-    <p>Discover the joy of traditional Indian sweets, crafted with care and made to bring people together.</p>
-    <div class="hero-actions">
-      <a class="primary-btn" href="#sweets">EXPLORE SWEETS</a>
-      <a class="text-btn" href="#story">OUR STORY ↗</a>
-    </div>
+<section class="hero" id="home"><div class="wrap"><div class="hero-content">
+ <div class="eyebrow">Floral design. Unforgettable events.</div>
+ <h1>We turn<br>moments<br>into <em>magic.</em></h1><div class="flourish">— ❦</div>
+ <p>Thoughtful designs. Beautiful blooms.<br>Timeless celebrations.</p><a class="btn" href="#gallery">Explore our work <span>→</span></a>
+</div></div></section>
+<section class="section" id="services"><div class="wrap">
+ <div class="center reveal"><div class="section-label">Signature work</div><h2>Details that tell your story.</h2><div class="flourish">❦</div><p class="subline">Personal, thoughtful floral design made for the moments you want to remember forever.</p></div>
+ <div class="cards">
+  <article class="work-card reveal"><div class="work-img"><img loading="lazy" src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=800&q=85" alt="Hand-tied pastel rose bouquet"></div><h3><span class="tiny-icon">❀</span>Bouquets</h3><p>Handcrafted with love, designed to impress.</p></article>
+  <article class="work-card reveal delay-1"><div class="work-img"><img loading="lazy" src="https://images.unsplash.com/photo-1507504031003-b417219a0?auto=format&fit=crop&w=800&q=85" alt="Romantic candlelit floral table setting" onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=85'"></div><h3><span class="tiny-icon">♧</span>Centerpieces</h3><p>Elegant arrangements that elevate every table.</p></article>
+  <article class="work-card reveal delay-2"><div class="work-img"><img loading="lazy" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=85" alt="Wedding ceremony floral decor"></div><h3><span class="tiny-icon">❦</span>Full decor</h3><p>Complete setups that bring your vision to life.</p></article>
+  <article class="work-card reveal delay-3"><div class="work-img beforeafter"><img loading="lazy" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=85" alt="Beautifully styled wedding reception"><span class="tag">Signature setup</span></div><h3><span class="tiny-icon">♧</span>Transformations</h3><p>From ordinary spaces to extraordinary experiences.</p></article>
+ </div>
+</div></section>
+<section class="banner" id="journal"><div class="wrap"><div class="banner-content reveal"><div class="section-label">Made with intention</div><h2>Your vision.<br>Our <em>blooms.</em></h2><div class="flourish">— ❦</div><p>Every detail matters.<br>Let's create something beautiful together.</p><a href="#contact" class="btn">Plan your event <span>→</span></a></div></div></section>
+<section class="values"><div class="wrap value-grid">
+ <div class="value"><span class="ico">❀</span><div><strong>Custom designs</strong><small>Tailored to your story</small></div></div>
+ <div class="value"><span class="ico">♧</span><div><strong>Premium blooms</strong><small>Fresh. Seasonal. Beautiful.</small></div></div>
+ <div class="value"><span class="ico">▦</span><div><strong>Full-service events</strong><small>Planning to perfection</small></div></div>
+ <div class="value"><span class="ico">♡</span><div><strong>Passion &amp; care</strong><small>In every petal we place</small></div></div>
+</div></section>
+<section class="section" id="gallery"><div class="wrap"><div class="center reveal"><div class="section-label">A little inspiration</div><h2>Petals, places &amp; moments.</h2><p class="subline">A glimpse at the details that make every celebration feel uniquely yours. Tap any image to view it larger.</p></div>
+ <div class="gallery">
+  <button class="reveal" data-img="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=1600&q=90" aria-label="View bouquet photograph"><img loading="lazy" src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=700&q=80" alt="Pastel flower bouquet"></button>
+  <button class="reveal delay-1" data-img="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=90" aria-label="View wedding photograph"><img loading="lazy" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=80" alt="Romantic wedding table"></button>
+  <button class="reveal delay-2" data-img="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=90" aria-label="View ceremony photograph"><img loading="lazy" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80" alt="Wedding ceremony setting"></button>
+  <button class="reveal" data-img="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1600&q=90" aria-label="View reception photograph"><img loading="lazy" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=80" alt="Elegant reception tables"></button>
+  <button class="reveal delay-1" data-img="https://images.unsplash.com/photo-1507504031003-b417219a0?auto=format&fit=crop&w=1600&q=90" aria-label="View centerpiece photograph"><img loading="lazy" src="https://images.unsplash.com/photo-1507504031003-b417219a0?auto=format&fit=crop&w=700&q=80" alt="Floral table centerpiece" onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=80'"></button>
+  <button class="reveal delay-2" data-img="https://images.unsplash.com/photo-1507504031003-b417219a0?auto=format&fit=crop&w=1600&q=90" aria-label="View candlelight photograph"><img loading="lazy" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=700&q=80" alt="Warm candlelit celebration"></button>
+ </div>
+</div></section>
+<section class="section" id="about"><div class="wrap about-grid"><div class="about-photo reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=85" alt="Soft seasonal flowers in natural light"></div><div class="about-copy reveal delay-1"><div class="section-label">The heart behind the flowers</div><h2>Thoughtful by nature.<br>Beautiful by design.</h2><div class="flourish">— ❦</div><p>We believe flowers do more than decorate a space: they set a feeling, tell a story, and turn an important day into a lasting memory.</p><p>From intimate gatherings to once-in-a-lifetime celebrations, our approach starts with listening to your ideas and shaping them into a floral experience that feels like you.</p><a href="#contact" class="btn">Let's create together <span>→</span></a></div></div></section>
+<section class="contact" id="contact"><div class="wrap contact-grid"><div class="contact-info reveal"><div class="section-label">Let's make it memorable</div><h2>Tell us what<br>you're dreaming of.</h2><p>Share a few details and start a conversation about your flowers, event styling or celebration.</p><p><strong>Visit / directions</strong><br><a href="https://maps.app.goo.gl/VeJqZtNZXbSYqcfDA" target="_blank" rel="noopener">Open our Google Maps listing ↗</a></p><p><strong>Personal touch, always.</strong><br>Every enquiry is the beginning of a custom design.</p></div>
+ <form class="inquiry-form reveal delay-1" id="inquiryForm">
+  <div class="form-grid">
+   <div class="field"><label for="name">Your name *</label><input id="name" name="name" required autocomplete="name" placeholder="Full name"></div>
+   <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"></div>
+   <div class="field"><label for="event">Event type *</label><select id="event" name="event" required><option value="">Choose an occasion</option><option>Wedding</option><option>Engagement</option><option>Birthday / Anniversary</option><option>Corporate event</option><option>Fresh bouquet</option><option>Other celebration</option></select></div>
+   <div class="field"><label for="date">Event date</label><input id="date" name="date" type="date"></div>
+   <div class="field full"><label for="budget">Approximate budget</label><select id="budget" name="budget"><option value="">Choose a range (optional)</option><option>Under ₹10,000</option><option>₹10,000–₹30,000</option><option>₹30,000–₹75,000</option><option>₹75,000+</option><option>Not sure yet</option></select></div>
+   <div class="field full"><label for="message">Tell us a little more *</label><textarea id="message" name="message" required placeholder="Your venue, style, colours, guest count or ideas..."></textarea></div>
+   <div class="field full"><button class="btn" type="submit">Prepare enquiry <span>→</span></button><p class="form-note">This demo prepares an email with your details in your device's email app. Replace the sample email address in script.js with the business's real email before publishing.</p><div class="toast" id="formToast" role="status"></div></div>
   </div>
-  <div class="hero-image reveal">
-    <img src="https://images.unsplash.com/photo-1605197161470-5d6e7b4c4c9c?auto=format&fit=crop&w=1000&q=85" alt="Traditional Indian sweets" onerror="this.src='https://images.unsplash.com/photo-1571506165871-ee72a35bc9d4?auto=format&fit=crop&w=1000&q=85'">
-    <div class="image-note"><strong>Made with tradition</strong><small>FRESHNESS IN EVERY BITE</small></div>
-  </div>
-</section>
-
-<div class="marquee"><span>TRADITIONAL SWEETS ✳</span><span>MADE WITH LOVE ✳</span><span>THE TASTE OF INDIA ✳</span><span>TRADITIONAL SWEETS ✳</span></div>
-
-<section class="container intro reveal" id="story">
-  <div class="eyebrow">Our little story</div>
-  <h2>More than sweets,<br><em>it's a tradition.</em></h2>
-  <p>Every celebration deserves something sweet. At Baburam Misthan Bhandar, we celebrate the familiar flavours and timeless joy of Indian mithai. Visit us and make your special moments sweeter.</p>
-</section>
-
-<section class="container collection" id="sweets">
-  <div class="section-heading reveal">
-    <div><div class="eyebrow">Explore our collection</div><h2>Made to delight.</h2></div>
-    <p>A little sweetness for every occasion, celebration and everyday craving.</p>
-  </div>
-  <div class="products">
-    <article class="product reveal">
-      <div class="product-image"><img src="https://images.unsplash.com/photo-1601303516534-3c8a3b6f3d4a?auto=format&fit=crop&w=700&q=85" alt="Indian ladoo" loading="lazy"></div>
-      <div class="product-info"><h3>Ladoo</h3><span>TRADITIONAL FAVOURITE</span></div>
-    </article>
-    <article class="product reveal">
-      <div class="product-image"><img src="https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&w=700&q=85" alt="Indian barfi" loading="lazy"></div>
-      <div class="product-info"><h3>Barfi</h3><span>RICH & DELICIOUS</span></div>
-    </article>
-    <article class="product reveal">
-      <div class="product-image"><img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=700&q=85" alt="Indian jalebi" loading="lazy"></div>
-      <div class="product-info"><h3>Jalebi</h3><span>CRISP & SWEET</span></div>
-    </article>
-    <article class="product reveal">
-      <div class="product-image"><img src="https://images.unsplash.com/photo-1605197161470-5d6e7b4c4c9c?auto=format&fit=crop&w=700&q=85" alt="Indian mithai" loading="lazy"></div>
-      <div class="product-info"><h3>Special Mithai</h3><span>FOR EVERY OCCASION</span></div>
-    </article>
-    <article class="product reveal">
-      <div class="product-image"><img src="https://images.unsplash.com/photo-1571506165871-ee72a35bc9d4?auto=format&fit=crop&w=700&q=85" alt="Indian dessert" loading="lazy"></div>
-      <div class="product-info"><h3>Festive Sweets</h3><span>CELEBRATE SWEETLY</span></div>
-    </article>
-    <article class="product reveal">
-      <div class="product-image"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=85" alt="Indian dessert selection" loading="lazy"></div>
-      <div class="product-info"><h3>Sweet Treats</h3><span>A LITTLE HAPPINESS</span></div>
-    </article>
-  </div>
-</section>
-
-<section class="feature">
-  <div class="container feature-grid">
-    <div class="feature-image reveal">
-      <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=85" alt="Sweet treats" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1571506165871-ee72a35bc9d4?auto=format&fit=crop&w=900&q=85'">
-    </div>
-    <div class="feature-copy reveal">
-      <div class="eyebrow">A reason to celebrate</div>
-      <h2>Every occasion<br>deserves sweetness.</h2>
-      <p>From family gatherings to festive celebrations, make every moment memorable with a box of your favourite mithai.</p>
-      <a class="primary-btn" href="#contact">GET IN TOUCH</a>
-    </div>
-  </div>
-</section>
-
-<section class="container gallery" id="gallery">
-  <div class="section-heading reveal">
-    <div><div class="eyebrow">A glimpse of sweetness</div><h2>Our Gallery.</h2></div>
-    <p>Explore the world of colours, flavours and sweet moments.</p>
-  </div>
-  <div class="gallery-grid">
-    <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=700&q=85" alt="Sweet gallery 1" loading="lazy"></div>
-    <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&w=700&q=85" alt="Sweet gallery 2" loading="lazy"></div>
-    <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1601303516534-3c8a3b6f3d4a?auto=format&fit=crop&w=700&q=85" alt="Sweet gallery 3" loading="lazy"></div>
-    <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=85" alt="Sweet gallery 4" loading="lazy"></div>
-    <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1571506165871-ee72a35bc9d4?auto=format&fit=crop&w=700&q=85" alt="Sweet gallery 5" loading="lazy"></div>
-    <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1605197161470-5d6e7b4c4c9c?auto=format&fit=crop&w=700&q=85" alt="Sweet gallery 6" loading="lazy"></div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="container contact-grid">
-    <div class="reveal">
-      <div class="eyebrow">Come say hello</div>
-      <h2>Let's make<br>life sweeter.</h2>
-      <p>Have a question or planning a celebration? Get in touch or visit our shop in Moradabad.</p>
-      <div class="contact-actions">
-        <a class="primary-btn" href="tel:+919719097633">CALL THE SHOP</a>
-        <a class="text-btn" href="https://wa.me/919719097633" target="_blank" rel="noopener">WHATSAPP ↗</a>
-      </div>
-    </div>
-    <div class="contact-details reveal">
-      <div class="detail"><small>VISIT US</small><strong>Bartan Bazaar, Moradabad, Uttar Pradesh – 244001</strong></div>
-      <div class="detail"><small>CALL US</small><strong>+91 97190 97633</strong></div>
-      <div class="detail"><small>FIND US</small><strong>Baburam Misthan Bhandar, Moradabad</strong></div>
-    </div>
-  </div>
-</section>
-
-<section class="visit" id="visit">
-  <div class="eyebrow" style="justify-content:center;color:#ead5b7">Your sweet stop in Moradabad</div>
-  <h2>We'd love to see you.</h2>
-  <p>Drop by, discover your favourites and take home<br>a little box of happiness.</p>
-  <a class="primary-btn" href="https://maps.app.goo.gl/Nqns6aqCtsk1qRu4A" target="_blank" rel="noopener">GET DIRECTIONS ↗</a>
-</section>
+ </form>
+</div></section>
 </main>
-
-<footer>
-  <strong>Baburam Misthan Bhandar</strong>
-  <span>© 2026 Baburam Misthan Bhandar. All rights reserved.</span>
-  <a href="#home">BACK TO TOP ↑</a>
-</footer>
-
-<script>
-const menuToggle=document.getElementById('menuToggle');
-const navLinks=document.getElementById('navLinks');
-
-menuToggle.addEventListener('click',()=>{
-  navLinks.classList.toggle('open');
-  menuToggle.textContent=navLinks.classList.contains('open')?'✕':'☰';
-});
-
-document.querySelectorAll('.navlinks a').forEach(link=>{
-  link.addEventListener('click',()=>{
-    navLinks.classList.remove('open');
-    menuToggle.textContent='☰';
-  });
-});
-
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-},{threshold:0.12});
-
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-</script>
-</body>
-</html>
+<footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#home">BLOOM &amp; GRACE<small>FLORAL DESIGN &amp; EVENTS</small></a><span>Thoughtful designs. Timeless celebrations.</span><div class="socials"><a href="#gallery">Gallery</a><a href="#contact">Enquire</a><a href="https://maps.app.goo.gl/VeJqZtNZXbSYqcfDA" target="_blank" rel="noopener">Directions ↗</a></div><span>© <span id="year"></span> Bloom &amp; Grace</span></div></footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image"><button id="closeLightbox" aria-label="Close image">×</button><img id="lightboxImg" alt="Expanded gallery image"></div>
+<script src="script.js"></script>
+</body></html>
